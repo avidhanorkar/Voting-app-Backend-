@@ -1,7 +1,9 @@
-const express = require('express');
-const router = express.Router();
-const User = require('./../models/user');
-const {jwtAuthMiddleware, generateToken} = require('./../jwt');
+import express from 'express';
+import { Router } from 'express';
+import User from './../models/user';
+import { jwtAuthMiddleware, generateToken } from './../jwt';
+
+const router = Router();
 
 // POST route to add a person
 router.post('/signup', async (req, res) =>{
