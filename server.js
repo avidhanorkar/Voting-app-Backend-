@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express();
-const db = require('./db');
 require('dotenv').config();
 
 const bodyParser = require('body-parser'); 
@@ -9,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 // Import the router files
 const userRoutes = require('./routes/UserRoutes.js');
-const candidateRoutes = require('./routes/candidateRoutes');
+const candidateRoutes = require('./routes/CandidateRoutes.js')
 
 // Use the routers
 app.use('/user', userRoutes);
